@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_common"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_text"
+        android:clickable="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:onClick="back"
+            android:src="@mipmap/top_back" />
+        <View
+            android:id="@+id/view_temp"
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/left_image"
+            android:layout_marginRight="13dp"
+            android:background="@color/line_e9" />
+        <TextView
+            android:id="@+id/tv_update_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxWidth="150dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="更改名字"
+            android:layout_toRightOf="@id/view_temp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="visible"/>
+        <!--android:textStyle="bold"表示文字加粗-->
+        <TextView
+            android:id="@+id/tv_update_sava"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/add_send_selector"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/et_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ease_input_bar_bg_avtive"
+        android:ellipsize="end"
+        android:minHeight="48dp"
+        android:paddingLeft="5dp"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:textColor="#353535"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="好名字可以让你的好朋友更容易记得你"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>

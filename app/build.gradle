@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.ddtl.ye"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 105
+        versionName "1.0.1"
+
+         flavorDimensions "release"
+        // 65535
+        multiDexEnabled true
+        // AndroidManifest.xml  UMENG_CHANNEL value  ${UMENG_CHANNEL_VALUE}
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.ddtl",
+                JPUSH_APPKEY : "74e9aee9a7e8caaadaab79e6", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                UMENG_CHANNEL_VALUE: "qq"
+        ]
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("apk//HMiJn.jks")
+        }
+        release {
+            //这样写就得把demo.jk文件放在项目目录
+            storeFile file("HMiJn.jks")
+            storePassword "HMiJn123"
+            keyAlias "hmijn"
+            keyPassword "HMiJn123"
+
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "2g"
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = ['--multi-dex']
+            } else {
+                dx.additionalParameters += '--multi-dex'
+            }
+            dx.additionalParameters += "--main-dex-list=$projectDir/<filename>".toString()
+        }
+    }
+
+
+    buildTypes {
+        debug {
+//            multiDexKeepFile file('multidex-config.txt')
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            }
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+//            multiDexKeepFile file('multidex-config.txt')
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            }
+            debuggable false
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+
+            //混淆 true
+            minifyEnabled false
+
+            //Zipalign优化 true
+            zipAlignEnabled false
+
+            // 移除无用的resource文件 true
+            shrinkResources false
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+ 				qq  {
+            dimension "release"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME : "com.ddtl",
+                    JPUSH_APPKEY : "74e9aee9a7e8caaadaab79e6",
+                    JPUSH_CHANNEL : "developer-default",
+                    UMENG_CHANNEL_VALUE: "qq"
+            ]
+        }
+        pp  {
+            dimension "release"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME : "com.ddtl",
+                    JPUSH_APPKEY : "74e9aee9a7e8caaadaab79e6",
+                    JPUSH_CHANNEL : "developer-default",
+                    UMENG_CHANNEL_VALUE: "pp"
+            ]
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'com.jph.takephoto:takephoto_library:4.0.3'
+}

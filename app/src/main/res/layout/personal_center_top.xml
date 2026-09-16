@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:background="@drawable/personal_center_bg" >
+
+        <!--
+           app:border_color="@color/white"
+           app:border_width="2dp" -->
+        <com.name.replace.ui.CircleImageView
+            android:id="@+id/person_circleImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/logo"
+            app:border_color="@color/white"
+            app:border_width="2dp"/>
+
+        <LinearLayout
+            android:id="@+id/personal_center_user_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/person_circleImageView"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="张三"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_large" />
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="vip"
+                android:background="@drawable/bg_edge_gray"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/personal_center_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/personal_center_user_btn"
+            android:layout_alignTop="@id/person_circleImageView"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="设置"
+            android:drawableRight="@drawable/ico_share"
+            android:drawablePadding="2dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_large" />
+      
+        <TextView
+            android:id="@+id/personal_center_modify_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/personal_center_user_btn"
+            android:layout_alignBottom="@id/person_circleImageView"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="信息修改"
+            android:drawableRight="@drawable/ico_share"
+            android:drawablePadding="2dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_large" />
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white" >
+        
+            <LinearLayout
+                android:id="@+id/personal_center_integral_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personal_center_user_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="我的积分"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+            </LinearLayout>
+            		
+             <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/txt_gray_light" />
+                          
+             <LinearLayout
+                android:id="@+id/personal_center_focus_btn"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personal_center_user_focus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="商品收藏"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+            </LinearLayout>
+ 			 
+             <View
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/txt_gray_light" />
+             
+             <LinearLayout
+                android:id="@+id/personal_center_history"
+                 android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personal_center_user_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+
+                <TextView
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="浏览记录"
+                    android:textColor="@color/txt_black"
+                    android:textSize="@dimen/txt_large" />
+            </LinearLayout>
+        </LinearLayout>
+  </LinearLayout>
+</merge>

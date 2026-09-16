@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bg_common"
+	android:orientation="vertical" >
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:measureAllChildren="true"
+		android:scrollbars="none">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<include layout="@layout/personal_center_top" />
+
+			<include layout="@layout/divide_line" />
+
+			<RelativeLayout
+				android:id="@+id/rl_person_coupond"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="我的优惠券"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+
+			</RelativeLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/bg_common" />
+
+			<RelativeLayout
+				android:id="@+id/rl_persion_vip"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="我的会员"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+			</RelativeLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/bg_common" />
+
+			<RelativeLayout
+				android:id="@+id/rl_persion_award"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="抽奖记录"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+			</RelativeLayout>
+
+			<include layout="@layout/divide_line" />
+
+			<RelativeLayout
+				android:id="@+id/rl_person_point"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="积分红包"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+			</RelativeLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/bg_common" />
+
+			<RelativeLayout
+				android:id="@+id/rl_persion_order"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="我的订单"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+			</RelativeLayout>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="@color/bg_common" />
+
+			<RelativeLayout
+				android:id="@+id/rl_persion_charge"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="在线充值"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+			</RelativeLayout>
+
+			<include layout="@layout/divide_line" />
+
+			<RelativeLayout
+				android:id="@+id/rl_person_addr"
+				android:layout_width="match_parent"
+				android:layout_height="45dp"
+				android:background="@color/white">
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:text="收货地址管理"
+					android:textColor="@color/txt_black"
+					android:textSize="@dimen/txt_large" />
+
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_marginRight="5dp"
+					android:src="@drawable/right_arrow" />
+
+			</RelativeLayout>
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
