@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="turquoise">#40e0d0</color><!--青绿色 --> 
+  <color name="lawngreen">#3bae96</color><!--草绿色 -->
+  <color name="share_back">#f7f7f7</color>
+  <color name="darkgray">#a9a9a9</color><!--暗灰色 -->
+   <color name="bottom_red">#ff2500</color><!--暗红色 -->
+   <color name="bottom_red_press">#ff8800</color><!--暗红色 #ff4000-->
+
+    <color name="__picker_item_normal_green">#179b16</color><!--25%透明度-->
+    <color name="__picker_item_normal_green_pre">#09bb07</color><!--25%透明度-->
+
+    <color name="btn_press_color">#11406C</color>
+    <color name="btn_unpress_color">#1D7AD9</color>
+
+    <color name="bg_edit">#dddddd</color>
+    <color name="bg_common">#f2f2f2</color>
+
+    <color name="back_ground_color">#ebebeb</color>
+
+    <color name="txt_red">#ff6a38</color>
+    <color name="txt_gray_light">#a0a0a0</color>
+    <color name="txt_gray">#525459</color>
+    <color name="txt_black">#333333</color>
+</resources>

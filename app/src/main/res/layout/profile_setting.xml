@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_common"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_top"/>
+
+
+    <TextView
+        android:visibility="visible"
+        android:layout_marginLeft="14dp"
+        android:background="@color/line_e9"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        />
+    <RelativeLayout
+        android:id="@+id/re_notifications_setting"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:text="新消息提醒"
+            android:gravity="center_vertical"
+            android:textColor="#353535"
+            android:textSize="@dimen/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_marginLeft="14dp"
+        android:background="@color/line_e9"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/re_safety_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="账号安全中心"
+            android:textColor="#353535"
+            android:textSize="@dimen/txt_title" />
+    </RelativeLayout>
+
+    <TextView
+            android:visibility="visible"
+            android:layout_marginLeft="14dp"
+            android:background="@color/line_e9"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            />
+        <RelativeLayout
+            android:id="@+id/re_clearcache_setting"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:text="清理存储空间"
+                android:gravity="center_vertical"
+                android:textColor="#353535"
+                android:textSize="@dimen/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/back_ground_color"
+            />
+
+        <RelativeLayout
+            android:id="@+id/re_help_setting"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
+                android:text="帮助与反馈"
+                android:gravity="center_vertical"
+                android:textColor="#353535"
+                android:textSize="@dimen/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="14dp"
+            android:background="@color/line_e9"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            />
+        <RelativeLayout
+            android:id="@+id/re_aboutus_setting"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:text="关于我们"
+                android:gravity="center_vertical"
+                android:textColor="#353535"
+                android:textSize="@dimen/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+        <View
+            android:background="@color/back_ground_color"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/re_exit"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:text="退出"
+                android:gravity="center_vertical"
+                android:textColor="#353535"
+                android:textSize="@dimen/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+</LinearLayout>
